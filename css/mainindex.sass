@@ -1,0 +1,556 @@
+$main-green: #32dada
+*
+  //border: 1px solid #000
+  box-sizing: border-box
+  font-family: 微軟正黑體
+  letter-spacing: 1px
+
+button:focus
+  outline: none
+h1, h2, h3, h4, h5, h6
+  margin: 0
+  padding: 0
+@mixin ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+
+
+body, html
+  overflow-X: hidden
+body
+  overflow-y: hidden
+  padding-top: 70px
+  //position: relative
+
+
+@media (max-width: 1200px)
+  body
+    padding-top: 52px
+  
+
+.to-top-btn
+  width: 70px
+  height: 70px
+  //border: 1px solid black
+  position: fixed
+  z-index: 100
+  right: 20px
+  bottom: 20px
+  background-size: cover
+  cursor: pointer
+  opacity: 0
+  transition: 0.5s
+.to-top-g
+  background-image: url("../images/gotop_g.svg")
+.to-top-w
+  background-image: url("../images/gotop_w.svg")
+
+.op0
+  opacity: 0 !important
+.op1
+  opacity: 1 !important
+ 
+
+
+.bg-light
+  background-color: white !important
+nav.navbar.navbar-expand-xl.navbar-light
+  padding-top: 0
+  padding-bottom: 0
+  transition: 0.3s
+  .container-fluid
+    //padding: 0 50px
+  .navbar-brand
+    font-size: 28px
+    color: #227b7b
+  ul.navbar-nav.ml-auto
+    li.nav-item
+      a.nav-link
+        color: #227b7b
+        padding: 20px
+        font-weight: 300
+        transition: 0.3s
+        font-size: 20px
+        &:hover
+          background-color: #f1654c
+          color: white
+
+.bg-green
+  background-color: #227b7b !important
+  color: white !important
+  .navbar-brand
+    font-size: 28px
+    color: white !important
+  ul.navbar-nav.ml-auto
+    li.nav-item
+      a.nav-link
+        color: white !important
+        padding: 20px
+        font-weight: 300
+        transition: 0.3s
+        font-size: 20px
+        &:hover
+          background-color: #f1654c
+          color: white
+
+
+@media (max-width: 768px)
+  nav.navbar.navbar-expand-xl.navbar-light
+    .navbar-brand
+      font-size: 20px
+      margin: 5px 0
+
+
+
+//section_header
+.slider.main-slider
+  width: 100%
+  //margin: 30px 50px 50px
+  margin: 0 !important
+  li
+    img
+      display: inline-block
+      width: 100%
+  .slick-prev:before, .slick-next:before
+    color: black
+  // .slick-prev:before
+  //   transform: rotate(180deg)
+  img.a-left
+    transform: rotate(180deg) scale(3)
+    opacity: 0.5
+  img.a-right
+    transform: scale(3)
+    opacity: 0.5
+  img.a-left, img.a-right
+    transition: 0.3s
+    &:hover
+      opacity: 1
+  .slick-arrow
+    //display: none !important
+  .slick-prev
+    z-index: 200
+    left: 20px
+    //display: none
+  .slick-next
+    z-index: 200
+    right: 20px
+    //display: none
+  .slick-dots
+    bottom: 20px 
+    transform: scale(1.5)
+  .slick-dotted.slick-slider
+    margin: 0
+  .slick-dots li button:before
+    color: white
+
+
+
+section#section_class
+  background-color: white
+  .flag-area
+    img
+      width: 100%
+  .title-row
+    .col-6
+      padding: 20px 0
+      border-bottom: 8px solid $main-green
+      //box-sizing: border-box
+      transition: 0.3s
+      cursor: pointer
+      &:hover
+        border-bottom: 8px solid darken($main-green, 10%)
+      h3
+        text-align: center
+        font-size: 22px
+        font-weight: 500
+        color: #444
+  .container
+    background-color: white
+  .course-container
+    padding-top: 50px
+    position: relative
+    &:before
+      content: ""
+      display: block
+      position: absolute
+      width: 200%
+      height: 100%
+      top: 0
+      left: 50%
+      transform: translate(-50%)
+      background-image: url("../images/grey.png")
+
+    .col-sm-3, .col-xl-3
+      //padding: 0
+      //margin:
+      margin-bottom: 50px
+      .course-wrap
+        box-shadow: 0 1px 5px rgba(black, 0.5)
+        background: white 
+        h4
+          text-align: center
+          font-size: 22px
+          background-color: darken($main-green, 10%)
+          color: white
+          font-weight: 300
+          padding: 5px
+        p
+          padding: 25px 20px
+          font-weight: 300
+          //max-height: 300px
+        .more-btn-area
+          //margin: 25px 0
+          text-align: center
+          button
+            border: none
+            padding: 5px 30px
+            background-color: darken($main-green, 10%)
+            color: white
+            font-weight: 300
+            margin: 25px 0
+            cursor: pointer
+            transition: 0.3s
+            &:hover
+              background-color: #f1654c
+
+@media (min-width: 1200px)
+  section#section_class
+    p
+      height: 200px
+
+@media (max-width: 1200px)
+  section#section_class
+    p
+      height: 150px
+
+@media (max-width: 992px)
+  section#section_class
+    p
+      height: 150px
+
+@media (max-width: 768px)
+  section#section_class
+    p
+      height: 200px
+@media (max-width: 576px)
+  section#section_class
+    p
+      height: 150px
+
+.border-bottom-orange
+  border-bottom: 8px solid #f1654c !important
+.display-none
+  display: none
+
+.opacity-ani-0-1
+  animation: opani 1s
+  @keyframes opani
+    0%
+      opacity: 0
+    100%
+      opacity: 1
+
+//section#section_form
+section#section_form
+  background: #1c7a7b
+  color: white
+  font-weight: 300
+  .section-title
+    text-align: center
+    color: white
+    font-size: 40px
+    background: #f53e3a
+    font-weight: 400
+    padding: 20px 0
+  .container
+    padding-top: 50px
+    padding-bottom: 50px
+  form
+    .name-row
+      //border-radius: 0
+      .title
+        font-size: 20px
+        padding-bottom: 5px
+      .col-md-6
+        padding: 10px 10px
+      input
+        width: 100%
+        padding: 10px 10px
+        font-size: 16px
+      ::placeholder
+        color: #226868
+      .select-wrap
+        //height: 50px
+        position: relative
+        &:after
+          pointer-events: none
+          content: "▼"
+          display: block
+          position: absolute
+          right: 20px
+          top: 50%
+          transform: translateY(-50%)
+          color: #ef634c
+          //transform: translateY(-0%)
+          transition: 0.3s
+        &:hover
+          &:after
+            color: #226868
+        select
+          width: 100%
+          appearance: none
+          border-radius: 0px
+          padding: 10px 10px
+          background: white
+          color: #226868
+    .study-row
+      .col-sm-12
+        padding: 10px 10px
+      .title
+        font-size: 20px
+        padding-bottom: 10px
+      .checkbox-area
+        padding: 0px 20px
+        label
+          position: relative
+          cursor: pointer
+          input
+            width: 20px
+            vertical-align: 1px
+            opacity: 0
+          input:checked ~ .checkmark
+            //background-color: #2196F3
+          input:checked ~ .checkmark:after
+            display: block
+          .checkmark
+            position: absolute
+            top: 50%
+            left: 0
+            height: 15px
+            width: 15px
+            background-color: transparent
+            transform: translateY(-50%)
+            border: 1px solid white
+            cursor: pointer
+            &:after
+              content: "✓"
+              position: absolute
+              display: none
+              top: -4px
+              left: 0px
+          .text
+            padding: 0 5px
+            font-size: 15px
+            //font-weight: 200
+      .department
+        width: 100%
+        padding: 5px 15px
+        font-weight: 300
+        color: #226868
+    .row.attention-list
+      .col-sm-12
+        padding: 50px 10px
+        //padding-top: 50px
+        padding-bottom: 20px
+      .attention-list-title
+        font-size: 20px
+        padding: 8px 0
+      .underline-div
+        height: 1px
+        width: 40%
+        background: white
+        margin-bottom: 10px
+      ul
+        padding: 20px 0
+        font-size: 0
+        li
+          list-style-type: none
+          //font-size: initial
+          padding: 10px 0
+          display: flex
+          .num
+            width: 28px
+            display: inline-block
+            font-size: initial
+            vertical-align: top
+            font-size: 15px
+          p
+            width: auto
+            display: inline-block
+            font-size: initial
+            vertical-align: top
+            font-size: 15px
+    .row.submit-row
+      .col-sm-6
+        text-align: center
+        .clear-btn, input
+          padding: 10px 90px
+          background: #fff4ab
+          color: #226868
+          font-weight: 300
+          transition: 0.3s
+          border: none
+          cursor: pointer
+          width: 90%
+          text-align: center
+          &:hover
+            background: #ee6550
+            color: white
+        .clear-btn
+          margin: 0 auto
+
+label.error
+  color: #f53e3a
+
+@media (max-width: 576px)
+  section#section_form
+    .row.submit-row
+      .col-sm-6
+        padding: 10px 0
+        .clear-btn, input
+          width: 80%
+
+@media (min-width: 992px)
+  section#section_form
+    .row.submit-row
+      .col-sm-6
+        .clear-btn, input
+          width: 80% !important
+
+
+//section#section_about
+section#section_about
+  padding-top: 200px
+  padding-bottom: 200px
+  //background-image: url("../images/about_bg.jpg")
+  background-size: cover
+  background-position: center center
+  position: relative
+  background-attachment: fixed
+  
+  .container
+    .row
+      .col-sm-12
+        h1
+          font-size: 40px
+          font-weight: 400
+          margin: 20px 0
+          letter-spacing: 5px
+        p 
+          font-weight: 300
+          line-height: 30px
+          b
+            font-weight: 900 !important
+
+section#section_image-area
+  .slider.banner-slider
+    font-size: 0
+    li
+
+      .img-area
+        height: 300px
+        background-size: cover
+        background-position: center center
+      .img1
+        background-image: url("../images/aboutme1.jpg")
+      .img2
+        background-image: url("../images/aboutme2.jpg")
+      .img3
+        background-image: url("../images/aboutme3.jpg")
+      .img4
+        background-image: url("../images/aboutme4.jpg")
+    .slick-prev
+      left: 20px
+      z-index: 100
+    .slick-next
+      right: 20px
+      z-index: 100
+    .slick-prev:before
+      content: "❮"
+      font-size: 40px
+      color: white
+    .slick-next:before
+      content: "❯"
+      font-size: 40px
+      color: white
+
+footer#section_footer
+  //background-image: url("../images/about_bg.jpg")
+  background-size: cover
+  background-position: center center
+  position: relative
+  background-attachment: fixed
+  &:before
+    content: ""
+    display: block
+    //position: absolute
+    width: 100%
+    height: 100%
+    //border: 1px solid black
+    //background-color: black
+    background-image: url("../images/about_bg.jpg")
+    background-size: cover
+    //background-attachment: fixed
+    position: fixed
+    background-position: center center
+    z-index: -1
+    bottom: 0
+    left: 0
+    //top: 5000px
+  .container
+    padding-top: 70px
+    padding-bottom: 70px
+    .row
+      padding: 50px 10px
+      .logo-col
+        text-align: left
+
+        img.logo
+          width: 80%
+          margin-left: -17px
+      .info-area
+        margin-top: 20px
+        border-left: 8px solid #e31b11
+        margin-left: -20px
+        padding-left: 20px
+        div
+          font-size: 16px
+          color: #7a7a7a
+          margin-bottom: 0
+        .title
+          font-size: 18px
+          color: black
+          margin-bottom: 10px
+  .cpr-area
+    background-color: #2c3e50
+    text-align: center
+    color: white
+    padding: 8px 0
+    font-weight: 300
+    font-size: 12px
+@media (max-width: 992px)
+  footer#section_footer
+    .logo-col
+      margin-bottom: 20px
+    img.logo
+      width: 30% !important
+      min-width: 150px
+
+
+@media (max-width: 768px)
+  footer#section_footer
+    .col
+      margin: 10px 0
+
+
+
+
+
+
+
+
+
+
+
