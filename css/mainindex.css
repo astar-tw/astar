@@ -172,7 +172,9 @@ section#section_class {
       transform: translate(-50%);
       background-image: url("../images/grey.png"); }
     section#section_class .course-container .col-sm-3, section#section_class .course-container .col-xl-3 {
-      margin-bottom: 50px; }
+      margin-bottom: 50px;
+      padding-right: 10px;
+      padding-left: 10px; }
       section#section_class .course-container .col-sm-3 .course-wrap, section#section_class .course-container .col-xl-3 .course-wrap {
         -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
         box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
