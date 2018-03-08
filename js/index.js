@@ -66,7 +66,7 @@ $('.class1').trigger('click');
 //console.log($(".text-board-right h3").text().length)
 $(".slider.banner-slider").slick({
     dots: false,
-    //autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     speed: 1000,
     cssEase: 'ease',
