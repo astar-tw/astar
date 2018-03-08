@@ -136,6 +136,10 @@ nav.navbar.navbar-expand-xl.navbar-light {
   .slider.main-slider .slick-dots li button:before {
     color: white; }
 
+@media (max-width: 500px) {
+  .slider.main-slider .slick-dots {
+    display: none; } }
+
 section#section_class {
   background-color: white; }
   section#section_class .flag-area img {
@@ -430,6 +434,11 @@ section#section_about {
     line-height: 30px; }
     section#section_about .container .row .col-sm-12 p b {
       font-weight: 900 !important; }
+
+@media (max-width: 576px) {
+  section#section_about {
+    padding-top: 100px;
+    padding-bottom: 100px; } }
 
 section#section_image-area .slider.banner-slider {
   font-size: 0; }
