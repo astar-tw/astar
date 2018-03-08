@@ -136,7 +136,7 @@ nav.navbar.navbar-expand-xl.navbar-light {
   .slider.main-slider .slick-dots li button:before {
     color: white; }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   .slider.main-slider .slick-dots {
     opacity: 0; } }
 
