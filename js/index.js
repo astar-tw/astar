@@ -1,4 +1,16 @@
-
+wv.getSettings().setSupportMultipleWindows(true);
+wv.setWebChromeClient(new WebChromeClient() {
+    @Override
+    public boolean onCreateWindow(WebView view, boolean dialog, boolean userGesture, android.os.Message resultMsg)
+    {
+        WebView.HitTestResult result = view.getHitTestResult();
+        String data = result.getExtra();
+        Context context = view.getContext();
+        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(data));
+        context.startActivity(browserIntent);
+        return false;
+    }
+});
 
 
 $(".slider.main-slider").slick({
